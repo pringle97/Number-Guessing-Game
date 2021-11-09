@@ -8,14 +8,14 @@
 
    let guess = prompt(`Pick a number 1-15`)
   //  let randomNumber = Math.floor(Math.random() * 15)
-let randomNumber = Math.floor(Math.random() * (16 - 1) + 1)
+let answer = Math.floor(Math.random() * (15) + 1 
     console.log(guess)
     console.log(getRandomInt(15))
-  
-    if (parseInt(guess) === randomNumber) {
+  //parseInt makes a string of a number into a number
+    if (parseInt(guess) === answer) {
         alert(`Congrats! You won!`);
       } else {
-        alert("You guessed " + guess + " but the number was " + randomNumber + ". Sorry! Give it another try?");
+        alert("You guessed " + guess + " but the number was " + answer + ". Sorry! Refresh and give it another try?");
       }
 
 
