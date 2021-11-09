@@ -1,23 +1,43 @@
-<body>
-  <script>
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-    }
 
-   let guess = prompt(`Pick a number 1-15`)
+  <!-- // function getRandomInt(min, max) {
+  //   min = Math.ceil(min);
+  //   max = Math.floor(max);
+  //   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    
+
+   
   //  let randomNumber = Math.floor(Math.random() * 15)
-let answer = Math.floor(Math.random() * (15) + 1 
-    console.log(guess)
-    console.log(getRandomInt(15))
-  //parseInt makes a string of a number into a number
-    if (parseInt(guess) === answer) {
-        alert(`Congrats! You won!`);
-      } else {
-        alert("You guessed " + guess + " but the number was " + answer + ". Sorry! Refresh and give it another try?");
+
+    // console.log(guess)
+    // console.log(getRandomInt(15))
+  //parseInt makes a string of a number into a number -->
+
+<body>
+
+  <script>
+
+  let answer = Math.floor(Math.random() * 15) + 1
+
+  console.log(answer)
+
+  let isCorrect = false
+
+  for (let i = 0; i < 5; i++) {
+    if (isCorrect === false) {
+
+     let guess = prompt(`Pick a number 1-15`)
+    
+      if (parseInt(guess) === answer) {
+        alert('Congrats! You won!')
+        isCorrect = true
+       } else{
+          if (i === 4) {
+          alert('Game over! Refresh and try again?')
+          } else {
+          ('Sorry! Try again')  
+        }
       }
-
-
+     }
+    }
   </script>
 </body>
